@@ -45,7 +45,6 @@ Promise.all(articlePromiseArray).then(function onFulfilled (pages) {
     let mailContent = '';
     pages.forEach(function(html) {
         let info = filterArticles(html);
-        // mailContent += info;
         printInfo(info);        
     }); 
 
@@ -58,7 +57,7 @@ Promise.all(articlePromiseArray).then(function onFulfilled (pages) {
         },
     });
 
-    mailContent = "<h1 style='font-weight: bold;'>【文章题目】 从一道面试题，到“我可能看了假源码</h1><p>发布时间：<span style='color:#1f7cce'>2017.02.20 17:01</span>\n</p><p>字数总计：<span style='color:#1f7cce'>1655</span>\n</p><p>浏览人数：<span style='color:#1f7cce'>2142</span>\n</p><p>评论人数：<span style='color:#1f7cce'>25</span>\n</p><p>收藏人数：<span style='color:#1f7cce'>27</span>\n</p><p>赞赏所的：<span style='color:#1f7cce'>16</span>\n</p>"
+    // mailContent需要由读者自行配制，这里对mailContent的赋值已经删去。
 
     var mailOptions = {
         from: '', // sender address
